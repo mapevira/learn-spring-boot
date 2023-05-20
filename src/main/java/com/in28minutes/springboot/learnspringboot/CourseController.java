@@ -17,11 +17,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CourseController {
 
+    private static final String IN28MINUTES = "in28minutes";
+
     @RequestMapping("/courses")
     public List<Course> retrieveAllCourses() {
         return Arrays.asList(
-                new Course(1, "Learn AWS", "in28minutes"),
-                new Course(2, "Learn DevOps", "in28minutes")
+                new Course(1, "Learn AWS", IN28MINUTES),
+                new Course(2, "Learn DevOps", IN28MINUTES),
+                new Course(3, "Learn Azure", IN28MINUTES),
+                new Course(4, "Learn GCP", IN28MINUTES)
 
                 );
     }
